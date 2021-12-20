@@ -39,6 +39,8 @@ function asideInfosAction()
     }
 }
 
+/* Likes Actions */ 
+
 const like = document.getElementById('like');
 const deslike = document.getElementById('deslike');
 
