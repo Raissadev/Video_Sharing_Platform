@@ -54,3 +54,6 @@
     </div>
 </section>
  
+
+
+<script src="<?= BASE_PATH ?>/js/like.js"></script>
