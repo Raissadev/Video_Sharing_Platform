@@ -1,6 +1,6 @@
 # Video Sharing Platform
 <h3>Sobre o Projeto</h3>
-<p>Fala Devs! Estou trazendo aqui uma plataforma de compartilhamento de vídeo (como um YouTube).</p>
+<p>Fala Devs! Estou trazendo aqui uma plataforma de compartilhamento de vídeo (como um YouTube). A aplicação possui diversos métodos de segurança, para garantir que usuários maliciosos não prejudiquem a plataforma, além de possuir um layout intuitivo e atraente para os visitantes. <br /> Nessa plataforma, um único usuário poderá ter diversos canais, e também poderá escolher em quais de seus canais deseja postar o seu conteúdo.</p>
 
 <ul>
   <li>Lenguages:</li>
@@ -16,6 +16,10 @@
   <i>HTML</i>
   
 </ul>
+
+
+
+https://user-images.githubusercontent.com/82960240/146782630-b7779034-2949-4f16-9dd6-f78babb2bbf3.mp4
 
 
 
