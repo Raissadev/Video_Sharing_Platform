@@ -4,7 +4,7 @@ require 'Config/config.php';
 
 $Route = new app\Route\Router;
 
-if($_SERVER['REQUEST_URI'] !== '/sign-in' && !isset($_SESSION['login'])){
+if($_SERVER['REQUEST_URI'] !== '/sign-in' && $_SERVER['REQUEST_URI'] !== '/sign-up' && !isset($_SESSION['login'])){
     header('Location: '.BASE_URL.'/sign-in');
 }
 
