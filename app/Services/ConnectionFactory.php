@@ -2,6 +2,8 @@
 
 namespace app\Services;
 
+use src\Exceptions\AuthenticatorException;
+
 class ConnectionFactory extends \PDO
 {
 
@@ -18,8 +20,7 @@ class ConnectionFactory extends \PDO
                 self::$sql = new \PDO('pgsql:host='.self::$host.';dbname='.self::$database.'',''.self::$user.'',''.self::$password.'',array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
                 self::$sql->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             }catch(Exception $e){
-                // TODO: Lançar exception
-                echo $e->getMessage();
+                throw new AuthenticatorException("Erro ao conectar com a database");
             }
         }
 
