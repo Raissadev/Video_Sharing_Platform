@@ -39,11 +39,11 @@ class ChannelContentController extends ChannelContent
 
     public function setLike(): void
     {
-        if(isset($_POST['like'])){
-            (new ChannelContent)->addLike($_POST['channel_content'], $_POST['like']);
+        if(isset($_GET['like'])){
+            (new ChannelContent)->addLike($_GET['channel_content'], $_GET['like']);
         }
-        elseif(isset($_POST['deslike'])){
-            (new ChannelContent)->addDeslike($_POST['channel_content'], $_POST['deslike']);
+        elseif(isset($_GET['deslike'])){
+            (new ChannelContent)->addDeslike($_GET['channel_content'], $_GET['deslike']);
         }
     }
 

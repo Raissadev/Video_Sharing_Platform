@@ -14,8 +14,8 @@
             <h4 class="mr-bottom-tiny">About Content</h4>
             <p class="mr-bottom-small"><?= $params['content']['description'] ?></p>
             <div class="items-flex align-center">
-                <p class="mr-right-small">Gostou: <?= $params['content']['likes'] ?></p>
-                <p>Não Gostou: <?= $params['content']['deslikes'] ?></p>
+                <p class="mr-right-small">Gostou: <span id="count-likes"> <?= $params['content']['likes'] ?></span></p>
+                <p>Não Gostou: <span id="count-deslikes"><?= $params['content']['deslikes'] ?></span></p>
             </div>
         </div>
         <div class="box w45 pos-relative w100-dv-small items-flex direction-column just-space-between">
@@ -28,10 +28,10 @@
                     <input type="hidden" name="channel_content" value="<?= $params['content']['id'] ?>" />
                     <button type="submit" name="add-album"><i class="ri-heart-fill"></i></button>
                 </form>
-                <form method="POST" action="/channel-content/?id=<?= $params['content']['id'] ?>" class="likes items-flex align-center">
-                    <input type="hidden" name="channel_content" value="<?= $params['content']['id'] ?>" />
-                    <button type="submit" name="like" value="<?= $params['content']['likes'] + 1 ?>"><i class="ri-thumb-up-line"></i></button>
-                    <button type="submit" name="deslike" value="<?= $params['content']['deslikes'] + 1 ?>"><i class="ri-thumb-down-line"></i></button>
+                <form method="GET" action="/channel-content/?id=<?= $params['content']['id'] ?>" class="likes items-flex align-center">
+                    <input type="hidden" name="channel_content" id="channel_content" value="<?= $params['content']['id'] ?>" />
+                    <button type="submit" name="like" id="btn-like" value="<?= $params['content']['likes'] + 1 ?>"><i id="like" class="ri-thumb-up-line"></i></button>
+                    <button type="submit" name="deslike" id="btn-deslike" value="<?= $params['content']['deslikes'] + 1 ?>"><i id="deslike" class="ri-thumb-down-line"></i></button>
                 </form>
             </div>
         </div>
