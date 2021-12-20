@@ -26,6 +26,8 @@ class Channel extends ChannelRepository
 
         ChannelRepository::schemaNewChannel((int) $owner, (string) $name, (string) $about, (string) $image['name'], (string) $videos, (string) $followers);
         move_uploaded_file($image['tmp_name'], dirname(__DIR__, 2).'\storage\channels\\' . $image['name']);
+    
+        MessageAuth::launchMessage('success', 'Channel created successfully!');
     }
 
     public static function getChannels($query): array

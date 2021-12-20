@@ -38,10 +38,9 @@ class Profile extends UserRepository
     {
         $add = UserRepository::schemaAlbumAdd((int) $user, (int) $channelContent);
 
-        if($add){
-            MessageAuth::launchMessage('success', 'Content successfully added to the album!');
-            header('Location: '.BASE_URL.'/albuns');
-        };
+        MessageAuth::launchMessage('success', 'Content successfully added to the album!');
+        header('Location: '.BASE_URL.'/albuns');
+
     }
 
     public static function getAlbum($query, $user): array
