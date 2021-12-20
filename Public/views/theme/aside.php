@@ -27,7 +27,7 @@
         </div>
         <div class="row">
             <div class="wrap items-flex align-center just-space-between mr-bottom-small">
-                <h5> Content Creators </h5>
+                <h5> Users in Platform </h5>
                 <a class="circles items-flex align-center">
                     <span></span>
                     <span></span>
@@ -36,7 +36,6 @@
             <ul class="items-flex list-panel flex-wrap">
             <?php 
                 foreach($params['owners'] as $owner){
-                    if(str_contains($params['channels'][0]['owner'], $owner['id'])){
             ?>
                 <li class="text-center">
                     <figure class="img-tiny-channel pos-relative">
@@ -44,7 +43,7 @@
                     </figure>
                     <h5 class="font-size-tiny limit-line-one"><?= $owner['name'] ?></h5>
                 </li>
-            <?php }} ?>
+            <?php } ?>
             </ul>
         </div>
     </div>

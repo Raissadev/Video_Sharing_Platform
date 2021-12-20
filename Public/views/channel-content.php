@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="box w45 pos-relative w100-dv-small items-flex direction-column just-space-between">
-            <div>
+            <div class="mr-bottom-small">
                 <h4 class="mr-bottom-tiny">Title Content</h4>
                 <p><?= $params['content']['title'] ?></p>
             </div>

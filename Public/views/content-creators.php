@@ -14,9 +14,7 @@
         <ul class="row list-channels items-flex flex-wrap">
             <?php 
                 foreach($params['ownersSearch'] as $user){
-                    if(str_contains($params['channels'][0]['owner'], $user['id'])){
-                        include 'components/box-user-creator-content.php';
-                    }
+                    include 'components/box-user-creator-content.php';
                 } 
             ?>
         </ul>
