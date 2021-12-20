@@ -1,0 +1,1 @@
+<script src="<?= BASE_PATH ?>/js/global.js"></script>

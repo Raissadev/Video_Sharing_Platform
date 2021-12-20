@@ -1,0 +1,141 @@
+aside.panel {
+    padding:1.5rem 0;
+    border-right: 1px solid var(--gray-weak);
+}
+aside.panel .logo a span{
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 5px var(--gray);
+    background-color: var(--bluish-black);
+    border-radius: 50%;
+    margin-right: 0.28rem;
+}
+aside.panel .logo a span:nth-of-type(2){
+    background-color: var(--greenish-blue-weak);
+}
+aside.panel .logo a span:nth-of-type(3){
+    background-color: var(--gray);
+}
+aside.panel nav li, aside.panel .logo a{
+    padding: 0.5rem;
+    position: relative;
+}
+aside.panel nav ul h6{
+    padding: 0 0.5rem;
+}
+aside.panel nav li a{
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--bluish-black);
+    display: flex;
+    align-items: center;
+}
+aside.panel nav li a i{
+    margin-right: 0.6rem;
+}
+aside.panel nav li.active a, aside.panel nav li.active i{
+    color: var(--orange);
+}
+aside.panel nav li.active a::before{
+    content: '';
+    width: 3px;
+    height: 75%;
+    position: absolute;
+    right:-0.7rem;
+    background-color: var(--orange);
+}
+main.container{
+    width:63%;
+}
+aside.infos-aside{
+    width: 20%;
+    position: fixed;
+    right:0;
+    top:0;
+    height: 100%;
+    border-left: 1px solid var(--gray-weak);
+}
+header .wrap{
+    min-height: 10vh;
+}
+header .wrap nav li a{
+    font-weight: 600;
+}
+aside.infos-aside .row:nth-of-type(1) ul li div.col{
+    padding-top: 0.3rem;
+}
+aside.infos-aside .row:nth-of-type(2) ul.list-panel li{
+    width:28%;
+    min-width:28%;
+    margin: 0 2% 1rem 2%;
+}
+
+/* Home */
+section.container-initial{
+    border:1px solid var(--gray-weak);
+    border-radius: 12px;
+    padding: 2rem 1rem;
+}
+section.container-initial ul.list-channels li{
+    min-width:23%;
+    max-width:23%;
+    margin-right:2%;
+}
+section.container-initial ul.list-channels li .button{
+    position: absolute;
+    bottom:10%;
+    right:5%;
+}
+
+/* Search */
+section.container-search ul.list-channels li{
+    margin-bottom:3%;
+}
+
+/* Channel */
+section.container-channel figure div h2{
+    color: var(--white);
+}
+
+/* Channel-Content */
+section.channel-content .video-content{
+    width: 100%;
+    height: 60vh;
+}
+
+
+
+@media screen and (max-width: 800px){
+    aside.panel{
+        background-color: var(--white);
+        position: fixed;
+        left:0;
+        top:0;
+        width: 80%;
+        max-height: 100vh;
+        overflow-y: auto;
+        z-index: 9;
+        animation: fadeInLeft .1s;
+    }
+    main.container{
+        width:100%;
+        margin-bottom: 10vh;
+    }
+    aside.infos-aside{
+        width: 50%;
+        background-color: var(--white);
+        z-index: 9999;
+    }
+    aside.infos-aside .row:nth-of-type(2) ul.list-panel li {
+        width: 48%;
+        min-width: 48%;
+    }
+    section.container-initial ul.list-channels{
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    section.container-initial ul.list-channels li {
+        min-width: 48%;
+        max-width: 48%;
+    }
+}

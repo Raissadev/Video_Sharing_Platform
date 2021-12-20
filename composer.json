@@ -1,0 +1,24 @@
+{
+    "name": "user/my-youtube-with-php",
+    "description": "WebSite",
+    "autoload": {
+        "psr-4": {
+            "User\\MyYoutubeWithPhp\\": "src/",
+            "src\\Helpers\\": "src/Helpers/",
+            "src\\Middlewares\\": "src/Middlewares/",
+            "src\\Repository\\": "src/Repository/",
+            "app\\Controllers\\": "app/Controllers/",
+            "app\\Models\\": "app/Models/",
+            "app\\Services\\": "app/Services/",
+            "app\\Route\\": "app/Route/",
+            "Config\\": "Config/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raissadev",
+            "email": "raissa.fullstack@gmail.com"
+        }
+    ],
+    "require": {}
+}

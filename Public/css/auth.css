@@ -1,0 +1,25 @@
+section.container-auth{
+    background-image: url('../../storage/images/banner-auth.png');
+    background-size: cover;
+    background-position:center;
+}
+section.container-auth form{
+    animation: fadeInUp 1s;
+}
+section.container-auth form div p, section.container-auth form div a{
+    color: var(--black);
+}
+section.container-auth div.alert {
+    margin-left: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+		opacity: 0;
+		transform: translate3d(0, 50%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
