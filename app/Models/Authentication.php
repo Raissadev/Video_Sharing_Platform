@@ -31,7 +31,7 @@ class Authentication extends UserRepository
         move_uploaded_file($image['tmp_name'], dirname(__DIR__, 2).'\storage\users\\' . $image['name']);
 
         new User((int) $id, (string) $name, (string) $email, (string) $password, (string) $about, (string) $image['name']);
-        header('Location: '.BASE_URL.'/');
+        header('Location: '.BASE_URL.'/home');
     }
 
     protected static function login(string $email, string $password): void
@@ -48,7 +48,7 @@ class Authentication extends UserRepository
         };
 
         new User((int) $user['id'], (string) $user['name'], (string) $email, (string) $password, (string) $user['about'], (string) $user['image']);
-        header('Location: '.BASE_URL.'/');
+        header('Location: '.BASE_URL.'/home');
     }
 
 }

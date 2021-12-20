@@ -1,3 +1,5 @@
+<?php require 'components/flash-message.php'; ?>
+
 <section class="mr-bottom-default">
     <form method="GET" action="/search-page" class="wrap w90 center items-flex">
         <input type="text" name="name" placeholder="Enter the channel you are looking for..." autocomplete="off" class="w80 mr-right-small" />
