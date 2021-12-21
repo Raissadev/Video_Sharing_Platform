@@ -32,7 +32,7 @@ abstract class UserAuthenticator extends MessageAuth
 
     public static function verifyPassword(string $password): bool
     {
-        $strongPassword = filter_var($password, FILTER_VALIDATE_REGEXP, array( "options" => array("regexp"=>"/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/")));
+        $strongPassword = filter_var($password, FILTER_VALIDATE_REGEXP, array( "options" => array("regexp" => "/^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$/")));
         if(!$strongPassword){
             MessageAuth::launchMessage('error', 'Senha fraca! Coloque ao menos uma letra maiuscula, números e um caracter especial.');
             return false;
