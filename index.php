@@ -39,6 +39,4 @@ $Route->get('/favourites', 'app\Controllers\UserController', 'albuns');
 $Route->get('/content-creators-users', 'app\Controllers\ChannelController', 'contentCreatorsUsers');
 $Route->get('/?logout', 'app\Controllers\UserController', 'setLogout');
 $Route->get('/search-page', 'app\Controllers\Controller', 'searchPage');
-
-
-$Route->get('test', 'app\Controllers\Controller', 'test');
+$Route->get('/exception-treatament', 'app\Controllers\Controller', 'exceptionTreatament');

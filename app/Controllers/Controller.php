@@ -36,6 +36,11 @@ class Controller
         MainView::render('recents', [ 'owners' => $owners, 'notification' => $notification, 'channels' => $channels, 'contents' => $contents ]);
     }
 
+    public function exceptionTreatament(): void
+    {
+        MainView::renderAuth('exception-treatament', [  ]);
+    }
+
 }
 
 ?>
